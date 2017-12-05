@@ -1,0 +1,15 @@
+﻿<Properties StartupConfiguration="{AD97D57C-9337-EBA9-03BD-DE1B3A05AFC9}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CameraFollow.cs">
+    <Files>
+      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="18" Column="45" />
+      <File FileName="Assets/Scripts/CameraFollow.cs" Line="5" Column="26" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.TopDownShooter PreferredExecutionTarget="Unity.Editor" />
+  <MultiItemStartupConfigurations />
+</Properties>
