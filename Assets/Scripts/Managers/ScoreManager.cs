@@ -16,7 +16,7 @@ public class ScoreManager : MonoBehaviour
         Timer
     }
 
-    public int Limit;
+    private int Limit;
 
     private int _score;
 
@@ -36,15 +36,17 @@ public class ScoreManager : MonoBehaviour
     {
         if (Type == ScoreType.Timer)
         {
-            _score = Limit;
+            _score = Limit + GameControl.instance.playerInfo.Day * 15;
             setScoreTimer();
             StartCoroutine(addTimer());
         }
         else
         {
             if (Type == ScoreType.Spawn)
-            {
                 Limit = EnemyManager.instance.SpawnPoints.Count;
+            else if (Type == ScoreType.Decrease)
+            {
+                Limit = GameControl.instance.playerInfo.Day * 3;
             }
             _score = 0;
             setScoreText();
@@ -85,5 +87,4 @@ public class ScoreManager : MonoBehaviour
     {
         ScoreText.text = string.Format("{0:0}:{1:00}", Mathf.Floor(_score / 60), _score % 60);
     }
-
 }

@@ -575,7 +575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9274ba6a324c04c158106fe944b8fc3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions:
+  Actions:
   - {fileID: 1079857532}
   - {fileID: 1105511748}
   - {fileID: 617343024}
@@ -1076,7 +1076,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInfo:
-    Day: 0
+    Day: 1
     Money: 0
     LevelsComplete: 0
 --- !u!4 &1920771388

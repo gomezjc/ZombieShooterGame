@@ -46,5 +46,6 @@ public class GameControl : MonoBehaviour
     {
         playerInfo.Day += 1;
         playerInfo.LevelsComplete = 0;
+        LevelManager.HiddenButtons.Clear();
     }
 }

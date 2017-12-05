@@ -42,7 +42,7 @@ public class LevelManager : MonoBehaviour
 
     public void hideGame()
     {
-        if (ActualGame == 0) return;
+        if (ActualGame == 0 || GameControl.instance.playerInfo.LevelsComplete == 0) return;
 
         if (LevelWon)
         {
