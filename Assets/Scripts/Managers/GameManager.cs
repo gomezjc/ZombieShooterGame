@@ -33,7 +33,8 @@ public class GameManager : MonoBehaviour
         ChangeState("You Won!");
         StopGame();        
         MenuButton.SetActive(true);
-        GameControl.instance.addLevel();
+        GameControl.instance.addLevel();       
+        LevelManager.LevelWon = true;
     }
 
     public void GameOver()
@@ -42,6 +43,7 @@ public class GameManager : MonoBehaviour
         StopGame();
         RestartButton.SetActive(true);
         MenuButton.SetActive(true);
+        LevelManager.LevelWon = false;
     }
 
     public void Restart()
