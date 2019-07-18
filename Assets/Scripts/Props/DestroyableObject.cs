@@ -5,7 +5,14 @@ public class DestroyableObject : ShootableObject
     public Transform SpawnPoint;
     private bool _isDestroy;
 
-    public override void TakeDamage(int amount)
+    private ExplosiveObject explosive;
+
+    private void Start()
+    {
+        explosive = GetComponent<ExplosiveObject>();
+    }
+
+    public override void TakeDamage(float amount)
     {
         if (_isDestroy)
             return;
@@ -24,6 +31,11 @@ public class DestroyableObject : ShootableObject
         _isDestroy = true;
         
         Destroy(gameObject);
+
+        if(explosive != null)
+        {
+            explosive.enabled = true;
+        }
         
         if (SpawnPoint == null) return;
         

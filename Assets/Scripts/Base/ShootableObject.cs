@@ -3,14 +3,14 @@
 public class ShootableObject : MonoBehaviour
 {
     public int StartingHealth;
-    public int CurrentHealth;
+    public float CurrentHealth;
     
     private void Start()
     {
         CurrentHealth = StartingHealth;
     }
 
-    public virtual void TakeDamage(int amount)
+    public virtual void TakeDamage(float amount)
     {
         
     }

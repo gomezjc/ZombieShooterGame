@@ -3,7 +3,7 @@
     public bool IsDead;
     public int CostCash;
 
-    public override void TakeDamage(int amount)
+    public override void TakeDamage(float amount)
     {
         if (IsDead)
             return;
