@@ -9,6 +9,8 @@
             return;
 
         CurrentHealth -= amount;
+        HealthBar.fillAmount = CurrentHealth / StartingHealth;
+        
 
         if (CurrentHealth <= 0)
         {
