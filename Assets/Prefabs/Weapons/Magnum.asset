@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 950020b043d234a849e7f557cedc7788, type: 3}
   m_Name: Magnum
   m_EditorClassIdentifier: 
-  name: 
-  DamagePerShot: 0
-  TimeBetweenBullets: 0
-  Range: 0
+  name: Magnum
+  DamagePerShot: 130
+  TimeBetweenBullets: 2
+  Range: 100

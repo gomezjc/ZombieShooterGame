@@ -3,32 +3,22 @@
 public class DestroyableObject : ShootableObject
 {
     public Transform SpawnPoint;
-    private bool _isDestroy;
-
     private ExplosiveObject explosive;
 
-    private void Start()
+    protected void Start()
     {
+        base.Start();
         explosive = GetComponent<ExplosiveObject>();
     }
 
-    public override void TakeDamage(float amount)
+    public void TakeDamage(float amount)
     {
-        if (_isDestroy)
-            return;
-        
-        CurrentHealth -= amount;
-
-        if (CurrentHealth <= 0)
-        {
-            Destroy();
-        }
+        base.TakeDamage(amount);
     }
 
-
-    private void Destroy()
+    protected override void Destroy()
     {
-        _isDestroy = true;
+        destroyed = true;
         
         Destroy(gameObject);
 

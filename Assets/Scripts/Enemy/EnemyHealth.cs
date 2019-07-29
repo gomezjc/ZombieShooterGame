@@ -1,27 +1,9 @@
 ﻿public class EnemyHealth : ShootableObject
 {
-    public bool IsDead;
     public int CostCash;
 
-    public override void TakeDamage(float amount)
+    protected override void Destroy()
     {
-        if (IsDead)
-            return;
-
-        CurrentHealth -= amount;
-        HealthBar.fillAmount = CurrentHealth / StartingHealth;
-        
-
-        if (CurrentHealth <= 0)
-        {
-            Death();
-        }
-    }
-
-    private void Death()
-    {
-        IsDead = true;
-        
         // Si no es el tipo de juego Protect, se lleva un puntaje
         if (ScoreManager.instance.Type != ScoreManager.ScoreType.Timer 
             && ScoreManager.instance.Type != ScoreManager.ScoreType.Spawn)
@@ -35,5 +17,10 @@
         }
         
         Destroy(gameObject);
+    }
+
+    public void TakeDamage(float amount)
+    {
+        base.TakeDamage(amount);
     }
 }

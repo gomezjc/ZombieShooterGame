@@ -55,7 +55,7 @@ public class EnemyAttack : MonoBehaviour
     {
         _timer += Time.deltaTime;
 
-        if(_timer >= TimeBetweenAttacks && (_playerInRange || _barrierInRange) && !_enemyHealth.IsDead)
+        if(_timer >= TimeBetweenAttacks && (_playerInRange || _barrierInRange) && !_enemyHealth.destroyed)
         {
             Attack ();
         }

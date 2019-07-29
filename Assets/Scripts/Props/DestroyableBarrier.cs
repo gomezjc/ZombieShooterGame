@@ -1,35 +1,16 @@
 ﻿using UnityEngine;
 
-public class DestroyableBarrier : MonoBehaviour {
-
-	public int StartingHealth;
-	public int CurrentHealth;
-	private bool _isDestroy;
+public class DestroyableBarrier : ShootableObject {
     
-	private void Start()
+	protected override void Destroy()
 	{
-		CurrentHealth = StartingHealth;
-	}
-	
-	public void TakeDamage(int amount)
-	{
-		if (_isDestroy)
-			return;
-        
-		CurrentHealth -= amount;
-
-		if (CurrentHealth <= 0)
-		{
-			Destroy();
-		}
-	}
-
-
-	private void Destroy()
-	{
-		_isDestroy = true;
-		
+		destroyed = true;
 		Destroy(gameObject);
 	}
-	
+
+    public void TakeDamage(float amount)
+    {
+        base.TakeDamage(amount);
+    }
+
 }
