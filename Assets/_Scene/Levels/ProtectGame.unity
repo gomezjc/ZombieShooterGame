@@ -493,6 +493,7 @@ MonoBehaviour:
   StartingHealth: 100
   CurrentHealth: 0
   HealthBar: {fileID: 0}
+  destroyed: 0
 --- !u!1 &155444168
 GameObject:
   m_ObjectHideFlags: 0
@@ -1181,7 +1182,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &571377218
 Transform:
   m_ObjectHideFlags: 0
@@ -1517,6 +1518,7 @@ MonoBehaviour:
   StartingHealth: 100
   CurrentHealth: 0
   HealthBar: {fileID: 0}
+  destroyed: 0
 --- !u!1 &820227088
 GameObject:
   m_ObjectHideFlags: 0
@@ -6575,6 +6577,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Weapon: {fileID: 11400000, guid: c87b7ad99fd7b14499988fd2dd9e9bc3, type: 2}
+  FirePoint: {fileID: 826505220}
+  BulletPrefab: {fileID: 6445079504650596254, guid: d60685cf04d1fc749aff8fdc430cab69,
+    type: 3}
 --- !u!1001 &833078255
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6743,7 +6748,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1440236992446032, guid: c6b3000a761674a448f5f1d7f97bcb40, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4519392757253732, guid: c6b3000a761674a448f5f1d7f97bcb40, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9038,7 +9043,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1888654660
 MonoBehaviour:
   m_ObjectHideFlags: 0

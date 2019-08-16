@@ -72,6 +72,5 @@ public class GameManager : MonoBehaviour
     private void StopGame()
     {
         Time.timeScale = 0;
-        PlayerMovement.instance.GetComponentInChildren<PlayerShooting>().DisableEffects();
     }
 }
