@@ -15,4 +15,5 @@ MonoBehaviour:
   name: AK-47
   DamagePerShot: 20
   TimeBetweenBullets: 0.15
-  Range: 100
+  Range: 50
+  Speed: 30

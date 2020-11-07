@@ -16,3 +16,4 @@ MonoBehaviour:
   DamagePerShot: 130
   TimeBetweenBullets: 2
   Range: 100
+  Speed: 30

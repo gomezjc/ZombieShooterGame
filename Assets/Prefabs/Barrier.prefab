@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9158989935209867603}
   - component: {fileID: 9158989935213893939}
   - component: {fileID: 9158989934815756784}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Barrier
   m_TagString: Barrier
   m_Icon: {fileID: 0}
@@ -57,6 +57,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -68,6 +69,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -90,9 +92,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 4300002, guid: 6386a10e23c45d040a22051e6ae3b70f, type: 3}
 --- !u!114 &9158989934815756784
 MonoBehaviour:
@@ -109,6 +111,7 @@ MonoBehaviour:
   StartingHealth: 100
   CurrentHealth: 0
   HealthBar: {fileID: 6673116872727775405}
+  destroyed: 0
 --- !u!1001 &9158989933999733392
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -116,6 +119,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9158989935211637683}
     m_Modifications:
+    - target: {fileID: 2558300367254483517, guid: 22bd0ba2b0d6b9547ac6ba70e93bd746,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2558300367254483517, guid: 22bd0ba2b0d6b9547ac6ba70e93bd746,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2558300367254483517, guid: 22bd0ba2b0d6b9547ac6ba70e93bd746,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.08628178
+      objectReference: {fileID: 0}
     - target: {fileID: 4069737092833505126, guid: 22bd0ba2b0d6b9547ac6ba70e93bd746,
         type: 3}
       propertyPath: m_Name
@@ -139,7 +157,7 @@ PrefabInstance:
     - target: {fileID: 5173642013358627091, guid: 22bd0ba2b0d6b9547ac6ba70e93bd746,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.28
+      value: -3.6
       objectReference: {fileID: 0}
     - target: {fileID: 5173642013358627091, guid: 22bd0ba2b0d6b9547ac6ba70e93bd746,
         type: 3}
@@ -189,7 +207,7 @@ PrefabInstance:
     - target: {fileID: 5173642013358627091, guid: 22bd0ba2b0d6b9547ac6ba70e93bd746,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 4.03
+      value: 4.01
       objectReference: {fileID: 0}
     - target: {fileID: 5173642013358627091, guid: 22bd0ba2b0d6b9547ac6ba70e93bd746,
         type: 3}
@@ -246,27 +264,12 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.042951
       objectReference: {fileID: 0}
-    - target: {fileID: 2558300367254483517, guid: 22bd0ba2b0d6b9547ac6ba70e93bd746,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2558300367254483517, guid: 22bd0ba2b0d6b9547ac6ba70e93bd746,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2558300367254483517, guid: 22bd0ba2b0d6b9547ac6ba70e93bd746,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.08628178
-      objectReference: {fileID: 0}
-    - target: {fileID: 6790534971295260705, guid: 22bd0ba2b0d6b9547ac6ba70e93bd746,
+    - target: {fileID: 6043136528864405634, guid: 22bd0ba2b0d6b9547ac6ba70e93bd746,
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
-    - target: {fileID: 6043136528864405634, guid: 22bd0ba2b0d6b9547ac6ba70e93bd746,
+    - target: {fileID: 6790534971295260705, guid: 22bd0ba2b0d6b9547ac6ba70e93bd746,
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
@@ -288,6 +291,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

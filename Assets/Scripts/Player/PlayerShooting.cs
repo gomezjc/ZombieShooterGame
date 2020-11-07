@@ -28,8 +28,9 @@ public class PlayerShooting : MonoBehaviour
     {
         GameObject bulletGO = (GameObject)Instantiate(BulletPrefab, FirePoint.position, FirePoint.rotation);
         Bullet bullet = bulletGO.GetComponent<Bullet>();
-
-        if (bullet != null)
+        if (bullet)
+        {
             bullet.SetAttributes(Weapon);
+        }
     }
 }
