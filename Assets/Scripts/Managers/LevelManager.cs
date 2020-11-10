@@ -32,6 +32,14 @@ public class LevelManager : MonoBehaviour
     private void OnEnable()
     {
         hideGame();
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    // called second
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Debug.Log("OnSceneLoaded: " + scene.name);
+        Debug.Log(mode);
     }
 
     public void ChangeLevel(int index)

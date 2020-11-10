@@ -2,13 +2,14 @@
 
 public class CameraFollow : MonoBehaviour {
 
-	public Transform target;            // The position that that camera will be following.
+	private Transform target;            // The position that that camera will be following.
 	public float smoothing = 5f;        // The speed with which the camera will be following.
 
 	private Vector3 offset;                     // The initial offset from the target.
 
 	void Start()
 	{
+		target = GameObject.FindGameObjectWithTag("Player").transform;
 		// Calculate the initial offset.
 		offset = transform.position - target.position;
 	}
